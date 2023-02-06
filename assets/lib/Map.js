@@ -66,10 +66,11 @@ export const map = [
         background: forest,
         battle: true,
         encounter: 0,
+        destination: 0
     }
 ]
 
-function acquireItem(item){
+export function acquireItem(item){
     player.inventory = [...player.inventory, item]
     gameContainer.classList.add("fade")
     itemAcquire.classList.remove("hide")

@@ -1,5 +1,6 @@
-import { monsters } from "./monster.js.js"
-import { Player, cE, actionAnimation } from "./script.js.js"
+import { monsters } from "./Monster.js"
+import { player } from "../script.js"
+import { currentMonsters, actionAnimation } from "../battle.js"
 
 export let aoeItem=false
 
@@ -16,7 +17,7 @@ export const itemLibrary = {
         actionAnimation(player, damage)
     },
     bomb: ()=>{
-        monsters[cE].forEach(monster=>{
+        monsters[currentMonsters].forEach(monster=>{
             aoeItem = true
             let damage = 5
             monster.hp -= damage

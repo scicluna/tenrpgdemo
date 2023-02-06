@@ -1,42 +1,41 @@
-import { monsters } from "./monster.js.js"
-import { player, cE, actionAnimation} from "./script.js.js"
+import { monsters } from "./monster.js"
+import { player } from "../script.js"
+import { currentMonsters, actionAnimation} from "../battle.js"
 
 export let aoeAttack=false
 
 export const attackLibrary = 
 {
     sword: (target)=>{
-        let damage = 5
+        let damage = 5 - (target.armor || 0)
         target.hp -= damage
         actionAnimation(target, damage)
     },
     testsword: (target)=>{
-        let damage = 15
+        let damage = 15 - (target.ap || 0)
         target.hp -= damage
         actionAnimation(target, damage)
     },
-    kick: (target)=>{
-        target.hp -= 1
-    },
     bite: (target)=>{
-        let damage = 3
+        let damage = 3 - (target.ap || 0)
         target.hp -= damage
         actionAnimation(target, damage)
     },
     slam: (target)=>{
-        let damage = 2
+        console.log(target)
+        let damage = 2 - (target.ap || 0)
         target.hp -= damage
         actionAnimation(target, damage)
     },
     claw: (target)=>{
-        let damage = 2
+        let damage = 2 - (target.ap || 0)
         target.hp -= damage
         actionAnimation(target, damage)
     },
     cleave: ()=>{
-        monsters[cE].forEach(monster=>{
+        monsters[currentMonsters].forEach(monster=>{
             aoeAttack = true
-            let damage = 2
+            let damage = 2 - (target.ap || 0)
             monster.hp -= damage
             actionAnimation(monster, damage)
             aoeAttack = false

@@ -10,7 +10,7 @@ const hpEl = document.querySelector('.hp')
 const apEl = document.querySelector('.ap')
 
 //important initial values
-export const player = new Player("Player", 10, 1, ["sword","cleave"])
+export const player = new Player("Player", 10, 0, ["sword","cleave"])
 const initialLocation = 0
 
 //gameplay
@@ -35,3 +35,4 @@ function statusUpdate(){
     hpEl.innerText = player.hp
     apEl.innerText = player.ap
 }
+

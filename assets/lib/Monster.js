@@ -41,7 +41,7 @@ const tiger = new Monster("Tiger", 15, ["claw"], [])
 const tiger1 = new Monster("Tiger", 15, ["claw"], [])
 
 export const monsters = [
-    [slime ],
+    [slime],
     [slime, slime1, slime2], 
     [slime, slime1, bear], 
     [bear, bear1, tiger]
