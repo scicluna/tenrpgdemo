@@ -1,0 +1,287 @@
+*{
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: gray;
+    color:white
+}
+
+.peace-container{
+    display: flex;
+    height: 60vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: .5rem solid black;
+    position:relative;
+    background-color: rgba(222, 184, 135, 0.205);
+}
+
+.textbox {
+    display: flex;
+    text-align: left;
+    height: 20vh;
+    width: 60vw;
+}
+
+.text {
+    word-wrap: break-word;
+}
+
+.buttongrid {
+    display:grid;
+    width: 60vw;
+    height:30vh;
+    gap: 10px;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, auto);
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height:auto;
+    border: 5px solid rgba(0, 0, 0, 0.533)
+}
+
+.btn:hover{
+    border: 5px solid black
+}
+
+.resources{
+    display: flex;
+    width:92vw;
+    position: absolute;
+    bottom: 1vh;
+    left: 1vw;
+}
+
+.hp-space>img,
+.armor-space>img{
+    width: 3rem;
+    height:3rem;
+}
+
+.hp-space{
+    display: flex;
+    width: 50%;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.armor-space{
+    display: flex;
+    width:50%;
+    justify-content: right;
+    padding-right: 2rem;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+*, *::after, *::before{
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body{
+    margin:0;
+    background-size:cover;
+    color:rgba(255, 255, 255, 0.53);
+}
+
+.battlespace {
+    display: flex;
+    justify-content: space-around;
+    height: 60vh;
+    border: .5rem solid black;
+}
+
+.playerspace {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 20vh;
+    position:relative;
+    width:15vw;
+    padding-right:15px;
+}
+
+.monsterspace{
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 20vh;
+    position:relative;
+    width:15vw;
+    padding-right:15px;
+}
+
+.playerspace>h1{
+    margin: 1vw;
+}
+
+.monsterspace>h1{
+    margin: 1vw;
+}
+
+.playername{
+    font-size: 2vw;
+    margin: .5vw;
+}
+
+.monstername{
+    font-size: 2vw;
+    margin: .5vw;
+}
+
+.hpcontainer {
+    display: flex;
+    width: 10vw;
+    border: solid 1px rgba(255, 255, 255, 0.53);
+    height:4vh;
+}
+
+.monsterhpcontainer {
+    display: flex;
+    width: 10vw;
+    border: solid 1px rgba(255, 255, 255, 0.53);
+    height:4vh;
+}
+
+.playerhp {
+    --hpfill: 100%;
+    width: var(--hpfill);
+    background-color: red;
+    transition: width ease-in-out 300ms;
+    color:rgba(255, 255, 255, 0.53);
+    font-weight: bolder;
+    font-size:2vw;
+    height:4vh;
+    display:flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.monsterhp{
+    --mhpfill: 100%;
+    width: var(--mhpfill);
+    background-color: red;
+    transition: width ease-in-out 300ms;
+    color:rgba(255, 255, 255, 0.53);
+    font-weight: bolder;
+    font-size:2vw;
+    height:4vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.playernamehp {
+    display: flex;
+    align-items: center;
+    height:30%;
+    margin: 1vh;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+.monsternamehp {
+    display: flex;
+    align-items: center;
+    height:30%;
+    margin: 1vh;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+
+.playeroptions{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+
+.playeroptions>button{
+    width:5vw;
+}
+
+.playeritems{
+   display: flex;
+   flex-direction: column;
+   margin-top: 1vh; 
+}
+
+.playeritems>button{
+    width:5vw;
+}
+
+
+.monsteroptions{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+
+.monsteroptions>button{
+    width:5vw;
+}
+
+.target{
+    color:red
+}
+
+.hide{
+    display:none
+}
+
+.fade{
+    opacity:20%
+}
+
+.floatingdamage{
+    position: absolute;
+    top: 45px;
+    right: -25px;
+    color:red;
+    opacity:1;
+    font-size: 1.5em;
+    font-weight: bolder;
+    transition: opacity ease-out 200ms
+}
+
+.dim {
+    background-color: rgba(125, 117, 117, 0.69);
+    transition:  background-color ease-in-out 250ms;
+}
+
+.sneak{
+    opacity:0;
+}
+
+.healing{
+    color: green !important;
+}
+
+.game-container{
+    position:relative;
+    background-size: cover;
+    margin:4vw;
+}
+
+.item-acquire {
+    position:absolute;
+    top:35%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    background-image: url("./imgs/backgrounds/scroll.jpg");
+    background-size: cover;
+    text-align: center;
+    word-break: break-all;
+    color:black
+}
